@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/styles/contact.css">
+</head>
+<body>
+ 
+
+    <div id="top"><h1>Sign up </h1></div>
+    <div id="Form-Container">
+        <form action="/submit-form" method="post">
+            <label for="email">email:</label>
+            <input type="text" id="email" name="email"><br><br>
+            <label for="password">Password:</label>
+            <input type="number" id="password" name="password"><br><br>
+            <input type="submit" value="Submit">
+            </form>
+    </div>
+ <div id="text">   <span>If you are already signed up then</span> <a href="/login">Login</a> </div>
+<% if (message) { %>
+    <div id="alert" class="alert alert-success"><%= message %></div>
+<% } %>
+
+<script>
+   
+    const alert = document.getElementById('alert');
+    if (alert) {
+      
+        setTimeout(() => {
+            alert.style.display = 'none';
+        }, 5000);
+    }
+</script>
+
+</body> 
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geopolitical Insights</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="/styles/modal.css"> 
+    <link rel="stylesheet" href="/styles/map.css"> 
+</head>
+<body>
+    <nav>
+        <div class="logo">Alpha-Politics</div>
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="icon">&#9776;</label>
+        <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Sign Up</a></li>
+            <li><a href="/login">Log In</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-section">
+        <div class="slideshow-container"></div>
+    </section>
+
+    <section class="content">
+        <h1>Geopolitical Overview</h1>
+        <p>Welcome to our geopolitical insights page, where we analyze current global events, international relations, and their impacts on various regions.</p>
+        
+        <h2>Interactive Conflict Map</h2>
+        <div id="ucdp-map" style="height: 500px;"></div>
+    </section>
+
+    <button id="popupButton" class="popup-button">Show Updates</button>
+
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Latest Updates on Gaza Conflict</h2>
+            <div id="news-updates"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Geopolitical Insights. All rights reserved.</p>
+    </footer>
+
+    <script src="/scripts/main.js" defer></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="/scripts/map.js" defer></script> 
+</body>
+</html>

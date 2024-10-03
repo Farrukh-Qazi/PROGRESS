@@ -1,0 +1,128 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVIGATION BAR STYLES */
+nav {
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'New Amsterdam', serif;
+    font-size: 28px;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.menu a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+/* Interactive hover effect for links */
+.menu a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f39c12;
+    transition: width 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Toggle button for mobile view */
+.icon {
+    display: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu li {
+        margin: 15px 0;
+    }
+
+    #nav-toggle:checked + .menu {
+        display: flex;
+    }
+
+    .icon {
+        display: block;
+    }
+}
+
+/* ABOUT PAGE CONTENT STYLES */
+.about-content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f1f1f1;
+    border-left: 5px solid #555;
+    font-style: italic;
+}
